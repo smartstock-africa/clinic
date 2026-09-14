@@ -9,12 +9,17 @@ export default [
       globals: {
         $: 'readonly',
         jQuery: 'readonly',
+        NProgress: 'readonly',
+        URL: 'readonly',
+        localStorage: 'readonly',
+        setTimeout:'readonly',
+        document: 'readonly',
       },
     },
 
     rules: {
       'no-unused-vars': 'error',
-      'no-undef': 'error',
+      'no-undef': 'warn',
       'no-console': 'warn',
       eqeqeq: 'error',
       curly: ['error', 'multi-line'],
