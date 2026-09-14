@@ -25,7 +25,11 @@
     "@commitlint/config-conventional": "^21.2.2",
     "eslint": "^9.39.5",
     "husky": "^9.1.7",
+    "jsdom": "^27.0.1",
     "prettier": "^3.9.6",
     "vitest": "^3.2.7"
+  },
+  "dependencies": {
+    "jquery": "^4.0.0"
   }
 }

@@ -81,7 +81,7 @@ function returnSearchedProducts(searched_value, parsed_products) {
   );
 }
 
-function sortTable(sort_key, parsed_products, sort_type) {
+export function sortTable(sort_key, parsed_products, sort_type) {
   $('.sortVisible').addClass('activated');
   if (sort_type === 'ascending') {
     parsed_products.sort((a, b) => {
