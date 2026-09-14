@@ -718,6 +718,6 @@ tfoot tr {
   }
 
   .tableImageHolder {
-  width: 36px;
-}
+    width: 36px;
+  }
 }
