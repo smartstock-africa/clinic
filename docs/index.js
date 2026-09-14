@@ -262,6 +262,14 @@ function updateLink(url) {
   history.pushState({}, '', url);
   params = new URLSearchParams(window.location.search);
 }
+
+$(document).ajaxStart(function () {
+  NProgress.start();
+});
+
+$(document).ajaxStop(function () {
+  NProgress.done();
+});
 document.addEventListener('DOMContentLoaded', function () {
   let tokens = localStorage.getItem('clinic_login');
   let searched_products;
@@ -307,7 +315,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   $('main').on('click', '#loginButton', function () {
-    NProgress.start();
 
     let username = $('#username').val().toLowerCase().trim();
     let password = $('#password').val().trim();
@@ -346,7 +353,6 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       });
     } else {
-      NProgress.done();
       showErrorMessage('Empty Data', 'Enter data in both fields.');
     }
   });
@@ -361,7 +367,6 @@ document.addEventListener('DOMContentLoaded', function () {
         );
         placeProductsInTable(response_products);
         products = localStorage.getItem('clinic_products');
-        NProgress.done();
       });
     });
   }
@@ -402,11 +407,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function fetchProducts(skip = 0, category = null, clean = true) {
-    NProgress.start();
     fetchCategories();
     products = localStorage.getItem('clinic_products');
 
     if (products && skip_tracker === skip && !category && !clean) {
+      NProgress.start();
+
       $('#loginForm').fadeOut(function () {
         $('#productList').fadeIn(function () {
           placeProductsInTable(JSON.parse(products));
@@ -732,11 +738,13 @@ document.addEventListener('DOMContentLoaded', function () {
       .removeClass('animate__fadeOut');
   });
 
-  $('main').on('click', '.share_button', function () {
+  $('main').on('click', '.share_button', async function () {
     const url = new URL(window.location.href);
 
     url.searchParams.set('item', single_product.id);
     updateLink(url);
+    await navigator.clipboard.writeText(url);
+    showSuccessMessage('Link Copied', 'Share the link to preview the product.');
   });
 
   $('main').on('click', function (e) {
