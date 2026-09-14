@@ -315,7 +315,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   $('main').on('click', '#loginButton', function () {
-
     let username = $('#username').val().toLowerCase().trim();
     let password = $('#password').val().trim();
     if (username.length && password.length) {

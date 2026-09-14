@@ -18,7 +18,7 @@ export default [
         window: 'readonly',
         history: 'readonly',
         clearTimeout: 'readonly',
-        navigator:'readonly'
+        navigator: 'readonly',
       },
     },
 
