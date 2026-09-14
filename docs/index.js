@@ -112,8 +112,6 @@ function returnSearchedProducts(searched_value, parsed_products) {
   );
 }
 
-
-
 function placeProductsInTable(products) {
   let saved_sort_data = localStorage.getItem('sort_data');
   let saved_search_data = localStorage.getItem('search_term');
