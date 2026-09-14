@@ -6,6 +6,10 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+      globals: {
+        $: 'readonly',
+        jQuery: 'readonly',
+      },
     },
 
     rules: {
