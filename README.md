@@ -16,7 +16,6 @@ Below are the libraries I have used to add functionality to the HTML, CSS and JS
 > Example instead of document.getElementById("data"). with Jquery I can just $("#data")
 > </br>
 
-
 **NProgress** - A visual JS Library that shows a progress bar at the top of the DOM element, showing working or loading status.</br>
 
 > Start a loading animation in JS with NProgress.start() and finish with a NProgress.done()

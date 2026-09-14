@@ -628,8 +628,8 @@ tfoot tr {
   width: 20px;
   height: 20px;
   background: var(--bg-lighter);
-  mask: url('static/star.svg') center / contain no-repeat;
-  -webkit-mask: url('static/star.svg') center / contain no-repeat;
+  mask: url('https://developer.smartstock.africa/static/clinic/assets/star.svg') center / contain no-repeat;
+  -webkit-mask: url('https://developer.smartstock.africa/static/clinic/assets/star.svg') center / contain no-repeat;
 }
 
 .ratingStar {
