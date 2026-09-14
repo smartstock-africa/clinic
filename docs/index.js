@@ -639,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function () {
   $('main').on('click', '.categoryOption', function () {
     const url = new URL(window.location.href);
     if ($(this).hasClass('categorized')) {
-      let index = localStorage.getItem('skip_amount');
+      let index = parseInt(localStorage.getItem('skip_amount') || 0);
       url.searchParams.delete('category');
       fetchProducts(index, null, true);
       $('.categoryFilter').removeClass('activated');
