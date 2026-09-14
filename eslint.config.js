@@ -5,17 +5,17 @@ export default [
 
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: 'module'
+      sourceType: 'module',
     },
 
     rules: {
       'no-unused-vars': 'error',
       'no-undef': 'error',
       'no-console': 'warn',
-      'eqeqeq': 'error',
-      'curly': ['error', 'multi-line'],
-      'semi': ['error', 'always'],
-      'quotes': ['error', 'single']
-    }
-  }
+      eqeqeq: 'error',
+      curly: ['error', 'multi-line'],
+      semi: ['error', 'always'],
+      quotes: ['error', 'single'],
+    },
+  },
 ];

@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Check formatting
-        run: npm run format:check
+        run: npm run format
 
       - name: Lint
         run: npm run lint
@@ -32,4 +32,4 @@ jobs:
         run: |
           npx commitlint \
             --from "${{ github.event.pull_request.base.sha }}" \
-            --to "${{ github.event.pull_request.head.sha }}"  
+            --to "${{ github.event.pull_request.head.sha }}"
