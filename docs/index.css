@@ -344,7 +344,7 @@ table tbody tr td {
 }
 
 .tableImageHolder {
-  width: 36px;
+  width: 48px;
 }
 
 .align-center {
@@ -716,4 +716,8 @@ tfoot tr {
   .notificationTextHolder {
     font-size: var(--text-sm);
   }
+
+  .tableImageHolder {
+  width: 36px;
+}
 }
