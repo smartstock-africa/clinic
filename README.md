@@ -57,16 +57,7 @@ Each component has their own state and where the state lives matters
 ### FUNCTIONALITY
 
 1. Request Functionality </br>
-   With the JQuery Library I can send requests with the format
-
-> $.ajax({}) with the options
->
-> - type - 'POST', 'GET', 'PUT'
-> - url - The url to be requested
-> - headers - Receives an object of headers
-> - data - The body of the request if its a POST
-> - success - The function to run when the request is successful
-> - error - The function to run when the request is unsuccessful
+   With the JQuery Library I can send requests with the $.ajax() function.
 
 2. Cache Functionality </br>
    I will use the LocalStorage API to store data in the browser to reduce latency when requesting already fetched data.
@@ -80,12 +71,16 @@ I will use already predefined CSS styles that I have saved for ease of use.
 
 1. **Spacing** </br>
    Spaces are defined in the multiples of 4px.
-2. **Colour** </br>
-   The overall UI will take a dark color but can be changed to a light theme. The primary color will be a blue color for the buttons.
+2. **Color** </br>
+   The overall UI will take a dark color and the text will have an opposing white color. The primary color will be a blue color that will stylize the buttons.
 3. **Typography**</br>
    I will use the **Figtree** font for regular and button texts, **Jost** Font for headings and **Inconsolata** Font for the numbers.
+
 
 ### ACCESSIBILITY
 
 1. All images will be tagged with the alt attribute to add definitions to them.
 2. Inputs will be focus-able by pressing the **Tab** key.
+
+### WHERE I USED AI IN THIS SECTION
+I used AI to ask how to make <div>s focusable with the Tab key and run functions on Enter. It suggested I place a tabindex="0" on each div and add a custom class name in order to distinguish them from the generic div elements.
