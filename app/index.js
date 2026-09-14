@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function fetchCategories() {
-    categories = localStorage.getItem('categories');
+    let categories = localStorage.getItem('categories');
     if (categories) {
       placeCategories(JSON.parse(categories));
     } else {
@@ -626,7 +626,7 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('skip_amount', index);
       return;
     }
-    category = params.get('category');
+    let category = params.get('category');
     if (category) {
       fetchProducts(index, category);
     } else {

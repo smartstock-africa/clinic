@@ -12,8 +12,12 @@ export default [
         NProgress: 'readonly',
         URL: 'readonly',
         localStorage: 'readonly',
-        setTimeout:'readonly',
+        setTimeout: 'readonly',
         document: 'readonly',
+        URLSearchParams: 'readonly',
+        window: 'readonly',
+        history: 'readonly',
+        clearTimeout: 'readonly',
       },
     },
 
