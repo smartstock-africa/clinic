@@ -27,6 +27,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Run tests
+        run: npm test
+
       - name: Check commit messages
         if: github.event_name == 'pull_request'
         run: |
