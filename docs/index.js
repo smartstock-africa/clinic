@@ -1,3 +1,34 @@
+export function sortTable(sort_key, parsed_products, sort_type) {
+  $('.sortVisible').addClass('activated');
+  if (sort_type === 'ascending') {
+    parsed_products.sort((a, b) => {
+      const x = a[sort_key];
+      const y = b[sort_key];
+
+      if (typeof x === 'number' && typeof y === 'number') {
+        return x - y;
+      }
+
+      return String(x).localeCompare(String(y));
+    });
+  } else {
+    parsed_products.sort((a, b) => {
+      const x = a[sort_key];
+      const y = b[sort_key];
+
+      if (typeof x === 'number' && typeof y === 'number') {
+        return y - x;
+      }
+
+      return String(y).localeCompare(String(x));
+    });
+  }
+  populateProductTable(parsed_products);
+  $('.sortInvisible')
+    .removeClass('animate__fadeInDown')
+    .addClass('animate__fadeOutUp');
+}
+
 function showSuccessMessage(notification, notificationMessage) {
   let notificationHtml = `
             <div class='notificationContainer'>
@@ -81,36 +112,7 @@ function returnSearchedProducts(searched_value, parsed_products) {
   );
 }
 
-export function sortTable(sort_key, parsed_products, sort_type) {
-  $('.sortVisible').addClass('activated');
-  if (sort_type === 'ascending') {
-    parsed_products.sort((a, b) => {
-      const x = a[sort_key];
-      const y = b[sort_key];
 
-      if (typeof x === 'number' && typeof y === 'number') {
-        return x - y;
-      }
-
-      return String(x).localeCompare(String(y));
-    });
-  } else {
-    parsed_products.sort((a, b) => {
-      const x = a[sort_key];
-      const y = b[sort_key];
-
-      if (typeof x === 'number' && typeof y === 'number') {
-        return y - x;
-      }
-
-      return String(y).localeCompare(String(x));
-    });
-  }
-  populateProductTable(parsed_products);
-  $('.sortInvisible')
-    .removeClass('animate__fadeInDown')
-    .addClass('animate__fadeOutUp');
-}
 
 function placeProductsInTable(products) {
   let saved_sort_data = localStorage.getItem('sort_data');
